@@ -53,7 +53,10 @@ public class ClienteServiceTest {
     }
 
     private Cliente retornaObjeto(){
-        return new Cliente("teste", "11122233377", "7788987", 33);
+        Cliente cliente = new Cliente();
+        cliente.setId(1l);
+        cliente.setNome("Teste");
+        return cliente;
     }
 
 }

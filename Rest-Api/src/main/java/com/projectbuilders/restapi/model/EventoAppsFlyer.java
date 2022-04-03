@@ -4,22 +4,23 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-@Table(name="cliente")
 @Entity
-public class Cliente implements Serializable {
+@Table(name = "evento_apps")
+public class EventoAppsFlyer implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
     private Long id;
-
-    @Column(name="nome")
-    private String nome;
+    @Column(name="nome_evento")
+    private String nomeEvento;
+    @Column(name="data_hora_evento")
+    private LocalDateTime dataHoraEvento;
 
 }
